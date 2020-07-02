@@ -1,0 +1,17 @@
+// Сообщаяем babel какие пресеты использовать для транспайлинга кода
+// preset-env: ES6/ES7/ES8 в ES5
+// preset-react: JSX в ES5
+{
+  "presets": [
+    "@babel/preset-react",
+    ["@babel/preset-env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ],
+  "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["@babel/plugin-proposal-class-properties", { "loose": true }]
+    ]
+}
